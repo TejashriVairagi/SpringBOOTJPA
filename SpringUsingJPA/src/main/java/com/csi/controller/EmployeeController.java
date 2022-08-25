@@ -18,6 +18,10 @@ public class EmployeeController {
     @Autowired
     EmployeeServiceImpl employeeServiceImpl;
 
+    @GetMapping
+    public String sayHell(){
+        return "Written By Shraddha";
+    }
     @PostMapping("/savedata")
     public ResponseEntity<Employee> saveData(@RequestBody Employee employee){
         log.info("*************TRYING TO SAVE DATA FOR EMPLOYEE: "+ employee.getEmpFirstName());
